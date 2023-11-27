@@ -24,7 +24,7 @@ export class ChatTextGateWay
     console.log('Client disconnected:', client.id);
   }
 
-  @SubscribeMessage('message')
+  @SubscribeMessage('chunk-message')
   handleMessage(client: Socket, payload: any): string {
     console.log('Received message:', payload);
     return 'Message received';
